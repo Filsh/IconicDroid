@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger>
+
+    <dataSet config="main" >
+        <source path="/var/android-projects/lookinday/android/libs/IconicDroid/library/assets" />
+    </dataSet>
+    <dataSet config="release" >
+        <source path="/var/android-projects/lookinday/android/libs/IconicDroid/library/src/release/assets" />
+    </dataSet>
+
+</merger>

@@ -15,13 +15,6 @@
  */
 package com.atermenji.android.iconicdroid.util;
 
-import java.io.BufferedOutputStream;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
-
 import android.content.Context;
 import android.content.res.Resources.NotFoundException;
 import android.graphics.Typeface;
@@ -29,14 +22,21 @@ import android.util.Log;
 
 import com.atermenji.android.iconicdroid.R;
 
+import java.io.BufferedOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+
 /**
  * Helper class that wraps icon fonts and manages {@link Typeface} loading.
  */
 public class TypefaceManager {
 
-    private static final String TAG = "TypefaceManager";
+    protected static final String TAG = "TypefaceManager";
 
-    private TypefaceManager() {
+    protected TypefaceManager() {
     }
 
     public enum IconicTypeface {
@@ -44,7 +44,8 @@ public class TypefaceManager {
         ENTYPO(R.raw.entypo), 
         ENTYPO_SOCIAL(R.raw.entypo_social),
         FONT_AWESOME(R.raw.font_awesome),
-        ICONIC(R.raw.iconic);
+        ICONIC(R.raw.iconic),
+        ICOMOON(R.raw.linecons);
 
         private final int mTypefaceResourceId;
         private Typeface mTypeface;
@@ -69,7 +70,7 @@ public class TypefaceManager {
         }
     }
 
-    private static Typeface createTypefaceFromResource(final Context context, final int resource) {
+    protected static Typeface createTypefaceFromResource(final Context context, final int resource) {
         Typeface typeface = null;
         InputStream inputStream = null;
         OutputStream outputStream = null;
