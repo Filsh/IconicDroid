@@ -1,5 +1,0 @@
-<!-- From: file:/var/android-projects/lookinday/android/libs/IconicDroid/library/AndroidManifest.xml --><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="6" android:versionName="0.4.0" package="com.atermenji.android.iconicdroid">
-
-    <uses-sdk android:minSdkVersion="7" android:targetSdkVersion="19"/>
-
-</manifest>
